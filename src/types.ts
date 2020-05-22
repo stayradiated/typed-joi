@@ -29,6 +29,6 @@ interface Request<VRS extends ValidatedRequestSchema>
   extends ValidatedRequest<VRS> {}
 
 export interface Endpoint<S extends Schema> {
-  schemas?: Schema;
+  schema: S;
   handler(req: Request<ExtractedSchema<S>>, res?: Response): void;
 }

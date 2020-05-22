@@ -12,6 +12,7 @@ const myRouteSchema = {
 };
 
 const myRoute: Endpoint<typeof myRouteSchema> = {
+  schema: myRouteSchema,
   handler: async (req, res) => {
     const { projectId } = req.params;
     const { withData } = req.query;
